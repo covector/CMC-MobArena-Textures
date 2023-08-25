@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "minecraft:item/netherite_hoe"
+  },
+
+  "overrides": [
+  {"predicate": {"custom_model_data":43}, "model": "item/custom/PRIEST3"},
+  {"predicate": {"custom_model_data":63}, "model": "item/custom/SHADOWMAGE3"}
+  ]
+}

@@ -1,0 +1,479 @@
+{
+	"texture": "textures/entity/skeleton/skeleton.png",
+	"textureSize": [64, 32],
+	"models": [
+		{
+			"part": "head",
+			"id": "head",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0],
+			"submodels": [
+				{
+					"id": "death_reverse_head2",
+					"submodels": [
+						{
+							"id": "head2",
+							"texture": "textures/entity/skeleton/skeleton.png",
+							"invertAxis": "xy",
+							"boxes": [
+								{"coordinates": [-4, 28, -7, 8, 8, 8], "textureOffset": [0, 0]}
+							]
+						}
+					]
+				}
+			],
+			"animations": [
+				{
+					"death_reverse_head2.rz": "if(health <= 0, -torad((10-hurt_time*hurt_time/10)*9), 0)",
+					"head2.rx": "if(health <= 0 && hurt_time > 0, sin(age/8), 0)",
+					"head2.ry": "if(health <=0 && hurt_time > 0, sin(age/6), 0)",
+					"head2.rz": "if(health <= 0, if(hurt_time > 0, sin(age/7), pi/2), 0)",
+					"head2.tx": "31*(sin(head2.rx)*sin(head2.ry)*cos(head2.rz)-cos(head2.rx)*sin(head2.rz))+if(health <= 0, 4*(10-hurt_time), 0)", 
+					"head2.ty": "-31+31*(sin(head2.rx)*sin(head2.ry)*sin(head2.rz)+cos(head2.rx)*cos(head2.rz))+if(health <= 0, 27*(hurt_time*hurt_time-17*hurt_time+70)/70, 0)", 
+					"head2.tz": "31*sin(head2.rx)*cos(head2.ry)+if(health <= 0, -4*(10-hurt_time), 0)"
+				}
+			]
+		},
+		{
+			"part": "headwear",
+			"id": "headwear",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0],
+			"boxes": [
+				{"coordinates": [-4, 28, -7, 8, 8, 8], "textureOffset": [32, 0], "sizeAdd": 0.5}
+			]
+		},
+		{
+			"part": "body",
+			"id": "body",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0],
+			"submodels": [
+				{
+					"id": "body2",
+					"textureSize": [64, 64],
+					"texture": "textures/entity/skeleton/skeleton_boss.png",
+					"invertAxis": "xy",
+					"boxes": [
+						{"coordinates": [-5, 12, -3, 10, 16, 6], "textureOffset": [0, 24]}
+					],
+					"submodels": [
+						{
+							"id": "spine1",
+							"textureSize": [64, 64],
+							"texture": "textures/entity/skeleton/skeleton_boss.png",
+							"invertAxis": "xy",
+							"rotate": [20, 0, 0],
+							"boxes": [
+								{"coordinates": [-1, 12, -3, 2, 9, 2], "textureOffset": [56, 52]}
+							]
+						},
+						{
+							"id": "spine2",
+							"textureSize": [64, 64],
+							"texture": "textures/entity/skeleton/skeleton_boss.png",
+							"invertAxis": "xy",
+							"rotate": [-25, 0, 0],
+							"boxes": [
+								{"coordinates": [-1, 16, 12, 2, 10, 2], "textureOffset": [56, 52]}
+							]
+						},
+						{
+							"id": "heart",
+							"textureSize": [16, 8],
+							"texture": "textures/entity/skeleton/heart.png",
+							"invertAxis": "xy",
+							"boxes": [
+								{"coordinates": [-2, 19, -2, 4, 4, 4], "textureOffset": [0, 0]}
+							]
+						},
+						{
+							"id": "death_reverse_rib_l_1",
+							"submodels": [
+								{
+									"id": "rib_l_1_1",
+									"textureSize": [64, 64],
+									"texture": "textures/entity/skeleton/skeleton_boss.png",
+									"invertAxis": "xy",
+									"boxes": [
+										{"coordinates": [-1, 23, -12, 2, 2, 18], "textureOffset": [0, 0]}
+									],
+									"submodels": [											
+										{
+											"id": "rib_l_1_2",
+											"textureSize": [64, 64],
+											"texture": "textures/entity/skeleton/skeleton_boss.png",
+											"invertAxis": "xy",
+											"boxes": [
+												{"coordinates": [-1, 23, -26, 2, 2, 14], "textureOffset": [0, 0]}
+											],
+											"submodels": [
+												{
+													"id": "rib_l_1_3",
+													"textureSize": [64, 64],
+													"texture": "textures/entity/skeleton/skeleton_boss.png",
+													"invertAxis": "xy",
+													"boxes": [
+														{"coordinates": [-1, 24, -35, 2, 1, 9], "textureOffset": [0, 0]}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "death_reverse_rib_r_1",
+							"submodels": [
+								{
+									"id": "rib_r_1_1",
+									"textureSize": [64, 64],
+									"texture": "textures/entity/skeleton/skeleton_boss.png",
+									"invertAxis": "xy",
+									"boxes": [
+										{"coordinates": [-1, 23, -12, 2, 2, 18], "textureOffset": [0, 0]}
+									],
+									"submodels": [
+										{
+											"id": "rib_r_1_2",
+											"textureSize": [64, 64],
+											"texture": "textures/entity/skeleton/skeleton_boss.png",
+											"invertAxis": "xy",
+											"boxes": [
+												{"coordinates": [-1, 23, -26, 2, 2, 14], "textureOffset": [0, 0]}
+											],
+											"submodels": [
+												{
+													"id": "rib_r_1_3",
+													"textureSize": [64, 64],
+													"texture": "textures/entity/skeleton/skeleton_boss.png",
+													"invertAxis": "xy",
+													"boxes": [
+														{"coordinates": [-1, 24, -35, 2, 1, 9], "textureOffset": [0, 0]}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "rib_l_2_1",
+							"textureSize": [64, 64],
+							"texture": "textures/entity/skeleton/skeleton_boss.png",
+							"invertAxis": "xy",
+							"boxes": [
+								{"coordinates": [-3, 24, -9, 2, 2, 13], "textureOffset": [0, 0]}
+							],
+							"submodels": [
+								{
+									"id": "rib_l_2_2",
+									"textureSize": [64, 64],
+									"texture": "textures/entity/skeleton/skeleton_boss.png",
+									"invertAxis": "xy",
+									"boxes": [
+										{"coordinates": [-3, 25, -8, 2, 1, 10], "textureOffset": [0, 0]}
+									]
+								}
+							]
+						},
+						{
+							"id": "death_reverse_rib_r_2",
+							"submodels": [
+								{
+									"id": "rib_r_2_1",
+									"textureSize": [64, 64],
+									"texture": "textures/entity/skeleton/skeleton_boss.png",
+									"invertAxis": "xy",
+									"boxes": [
+										{"coordinates": [1, 24, -9, 2, 2, 13], "textureOffset": [0, 0]}
+									],
+									"submodels": [
+										{
+											"id": "rib_r_2_2",
+											"textureSize": [64, 64],
+											"texture": "textures/entity/skeleton/skeleton_boss.png",
+											"invertAxis": "xy",
+											"boxes": [
+												{"coordinates": [1, 25, -8, 2, 1, 10], "textureOffset": [0, 0]}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "rib_l_3_1",
+							"textureSize": [64, 64],
+							"texture": "textures/entity/skeleton/skeleton_boss.png",
+							"invertAxis": "xy",
+							"boxes": [
+								{"coordinates": [-2, 21, -5, 2, 1, 11], "textureOffset": [0, 0]}
+							],
+							"submodels": [
+								{
+									"id": "rib_l_3_2",
+									"textureSize": [64, 64],
+									"texture": "textures/entity/skeleton/skeleton_boss.png",
+									"invertAxis": "xy",
+									"boxes": [
+										{"coordinates": [-2, 20, -15, 2, 1, 10], "textureOffset": [0, 0]}
+									]
+								}
+							]
+						},
+						{
+							"id": "rib_r_3_1",
+							"textureSize": [64, 64],
+							"texture": "textures/entity/skeleton/skeleton_boss.png",
+							"invertAxis": "xy",
+							"boxes": [
+								{"coordinates": [0, 21, -5, 2, 1, 11], "textureOffset": [0, 0]}
+							],
+							"submodels": [
+								{
+									"id": "rib_r_3_2",
+									"textureSize": [64, 64],
+									"texture": "textures/entity/skeleton/skeleton_boss.png",
+									"invertAxis": "xy",
+									"boxes": [
+										{"coordinates": [0, 20, -15, 2, 1, 10], "textureOffset": [0, 0]}
+									]
+								}
+							]
+						},
+						{
+							"id": "rib_l_4",
+							"textureSize": [64, 64],
+							"texture": "textures/entity/skeleton/skeleton_boss.png",
+							"invertAxis": "xy",
+							"boxes": [
+								{"coordinates": [-12, 13, 5, 8, 6, 1], "textureOffset": [0, 57]}
+							]
+						},
+						{
+							"id": "rib_r_4",
+							"textureSize": [64, 64],
+							"texture": "textures/entity/skeleton/skeleton_boss.png",
+							"invertAxis": "xy",
+							"boxes": [
+								{"coordinates": [4, 13, 5, 8, 6, 1], "textureOffset": [0, 57]}
+							]
+						}
+					]
+				}
+			],
+			"animations": [
+				{
+
+					"heart.rx": "sin(age/10)",
+					"heart.ry": "sin(age/8)",
+					"heart.rz": "sin(age/pi/2)",
+					"heart.tx": "21*(sin(heart.rx)*sin(heart.ry)*cos(heart.rz)-cos(heart.rx)*sin(heart.rz))", 
+					"heart.ty": "-21+21*(sin(heart.rx)*sin(heart.ry)*sin(heart.rz)+cos(heart.rx)*cos(heart.rz))+sin(age/7)", 
+					"heart.tz": "21*sin(heart.rx)*cos(heart.ry)",
+					"heart.sx": "if(health > 0, clamp(age-45,0,10)/10, 0)",
+					"heart.sy": "if(health > 0, clamp(age-45,0,10)/10, 0)",
+					"heart.sz": "if(health > 0, clamp(age-45,0,10)/10, 0)",
+
+					"rib_l_1_1.rx": "if(health <= 0, if(hurt_time > 0, sin(age/5), 0), -torad(108+10*sin(age/(2*pi))-hurt_time*5 + 150-3*clamp(age,0,50)))",
+					"rib_l_1_1.ry": "if(health <= 0, if(hurt_time > 0, sin(age/7), 0), -torad(30 - hurt_time * 2))",
+					"rib_l_1_1.rz": "if(health <= 0, if(hurt_time > 0, sin(age/8), pi/2), torad(60 - hurt_time * 1.5))",
+					"rib_l_1_1.tx": "if(health <= 0, 18*(sin(rib_l_1_1.rx)*sin(rib_l_1_1.ry)*cos(rib_l_1_1.rz)-cos(rib_l_1_1.rx)*sin(rib_l_1_1.rz)) + 5*(10-hurt_time), 1-1*cos(rib_l_1_1.ry)*cos(rib_l_1_1.rz)+24*(sin(rib_l_1_1.rx)*sin(rib_l_1_1.ry)*cos(rib_l_1_1.rz)-cos(rib_l_1_1.rx)*sin(rib_l_1_1.rz))-5*(cos(rib_l_1_1.rx)*sin(rib_l_1_1.ry)*cos(rib_l_1_1.rz)+sin(rib_l_1_1.rx)*sin(rib_l_1_1.rz)))", 
+					"rib_l_1_1.ty": "if(health <= 0, -18+18*(sin(rib_l_1_1.rx)*sin(rib_l_1_1.ry)*sin(rib_l_1_1.rz)+cos(rib_l_1_1.rx)*cos(rib_l_1_1.rz)) + 28*(hurt_time*hurt_time-18*hurt_time+80)/80, -24-1*cos(rib_l_1_1.ry)*sin(rib_l_1_1.rz)+24*(sin(rib_l_1_1.rx)*sin(rib_l_1_1.ry)*sin(rib_l_1_1.rz)+cos(rib_l_1_1.rx)*cos(rib_l_1_1.rz))-5*(cos(rib_l_1_1.rx)*sin(rib_l_1_1.ry)*sin(rib_l_1_1.rz)-sin(rib_l_1_1.rx)*cos(rib_l_1_1.rz)))", 
+					"rib_l_1_1.tz": "if(health <= 0, 18*sin(rib_l_1_1.rx)*cos(rib_l_1_1.ry) + 2*(10-hurt_time), 5+1*sin(rib_l_1_1.ry)+24*sin(rib_l_1_1.rx)*cos(rib_l_1_1.ry)-5*cos(rib_l_1_1.rx)*cos(rib_l_1_1.ry))",
+					"rib_l_1_2.rx": "torad(120+10*sin(age/5.5))",
+					"rib_l_1_2.tx": "24*(sin(rib_l_1_2.rx)*sin(rib_l_1_2.ry)*cos(rib_l_1_2.rz)-cos(rib_l_1_2.rx)*sin(rib_l_1_2.rz))+12*(cos(rib_l_1_2.rx)*sin(rib_l_1_2.ry)*cos(rib_l_1_2.rz)+sin(rib_l_1_2.rx)*sin(rib_l_1_2.rz))", 
+					"rib_l_1_2.ty": "-24+24*(sin(rib_l_1_2.rx)*sin(rib_l_1_2.ry)*sin(rib_l_1_2.rz)+cos(rib_l_1_2.rx)*cos(rib_l_1_2.rz))+12*(cos(rib_l_1_2.rx)*sin(rib_l_1_2.ry)*sin(rib_l_1_2.rz)-sin(rib_l_1_2.rx)*cos(rib_l_1_2.rz))", 
+					"rib_l_1_2.tz": "-12+24*sin(rib_l_1_2.rx)*cos(rib_l_1_2.ry)+12*cos(rib_l_1_2.rx)*cos(rib_l_1_2.ry)",
+					"rib_l_1_3.rx": "torad(30+10*sin(age/4))",
+					"rib_l_1_3.ry": "torad(-15)",
+					"rib_l_1_3.rz": "torad(23)",
+					"rib_l_1_3.tx": "24*(sin(rib_l_1_3.rx)*sin(rib_l_1_3.ry)*cos(rib_l_1_3.rz)-cos(rib_l_1_3.rx)*sin(rib_l_1_3.rz))+26*(cos(rib_l_1_3.rx)*sin(rib_l_1_3.ry)*cos(rib_l_1_3.rz)+sin(rib_l_1_3.rx)*sin(rib_l_1_3.rz))", 
+					"rib_l_1_3.ty": "-24+24*(sin(rib_l_1_3.rx)*sin(rib_l_1_3.ry)*sin(rib_l_1_3.rz)+cos(rib_l_1_3.rx)*cos(rib_l_1_3.rz))+26*(cos(rib_l_1_3.rx)*sin(rib_l_1_3.ry)*sin(rib_l_1_3.rz)-sin(rib_l_1_3.rx)*cos(rib_l_1_3.rz))", 
+					"rib_l_1_3.tz": "-26+24*sin(rib_l_1_3.rx)*cos(rib_l_1_3.ry)+26*cos(rib_l_1_3.rx)*cos(rib_l_1_3.ry)",
+					"rib_l_1_1.sx": "clamp(age,0,50)/50",
+					"rib_l_1_1.sy": "clamp(age,0,50)/50",
+					"rib_l_1_1.sz": "clamp(age,0,50)/50",
+					"death_reverse_rib_l_1.rz": "if(health <= 0, -torad((10-hurt_time*hurt_time/10)*9), 0)",
+					
+					"rib_r_1_1.rx": "if(health <= 0, if(hurt_time > 0, sin(age/8), pi/4), -torad(108+10*sin(age/7)-hurt_time*5 + 150-3*clamp(age,0,50)))",
+					"rib_r_1_1.ry": "if(health <= 0, if(hurt_time > 0, sin(age/5), 0), torad(30 - hurt_time * 2 + 150-3*clamp(age,0,50)))",
+					"rib_r_1_1.rz": "if(health <= 0, if(hurt_time > 0, sin(age/7), -pi/2), -torad(60 - hurt_time * 1.5))",
+					"rib_r_1_1.tx": "if(health <= 0, 18*(sin(rib_l_1_1.rx)*sin(rib_l_1_1.ry)*cos(rib_l_1_1.rz)-cos(rib_l_1_1.rx)*sin(rib_l_1_1.rz)) - 5*(10-hurt_time), -1+1*cos(rib_r_1_1.ry)*cos(rib_r_1_1.rz)+24*(sin(rib_r_1_1.rx)*sin(rib_r_1_1.ry)*cos(rib_r_1_1.rz)-cos(rib_r_1_1.rx)*sin(rib_r_1_1.rz))-5*(cos(rib_r_1_1.rx)*sin(rib_r_1_1.ry)*cos(rib_r_1_1.rz)+sin(rib_r_1_1.rx)*sin(rib_r_1_1.rz)))", 
+					"rib_r_1_1.ty": "if(health <= 0, -18+18*(sin(rib_l_1_1.rx)*sin(rib_l_1_1.ry)*sin(rib_l_1_1.rz)+cos(rib_l_1_1.rx)*cos(rib_l_1_1.rz)) + 26*(hurt_time*hurt_time-11.5*hurt_time+15)/15, -24+1*cos(rib_r_1_1.ry)*sin(rib_r_1_1.rz)+24*(sin(rib_r_1_1.rx)*sin(rib_r_1_1.ry)*sin(rib_r_1_1.rz)+cos(rib_r_1_1.rx)*cos(rib_r_1_1.rz))-5*(cos(rib_r_1_1.rx)*sin(rib_r_1_1.ry)*sin(rib_r_1_1.rz)-sin(rib_r_1_1.rx)*cos(rib_r_1_1.rz)))", 
+					"rib_r_1_1.tz": "if(health <= 0, 18*sin(rib_l_1_1.rx)*cos(rib_l_1_1.ry), 5-1*sin(rib_r_1_1.ry)+24*sin(rib_r_1_1.rx)*cos(rib_r_1_1.ry)-5*cos(rib_r_1_1.rx)*cos(rib_r_1_1.ry))",
+					"rib_r_1_2.rx": "torad(120+10*sin(age/5))",
+					"rib_r_1_2.tx": "24*(sin(rib_r_1_2.rx)*sin(rib_r_1_2.ry)*cos(rib_r_1_2.rz)-cos(rib_r_1_2.rx)*sin(rib_r_1_2.rz))+12*(cos(rib_r_1_2.rx)*sin(rib_r_1_2.ry)*cos(rib_r_1_2.rz)+sin(rib_r_1_2.rx)*sin(rib_r_1_2.rz))", 
+					"rib_r_1_2.ty": "-24+24*(sin(rib_r_1_2.rx)*sin(rib_r_1_2.ry)*sin(rib_r_1_2.rz)+cos(rib_r_1_2.rx)*cos(rib_r_1_2.rz))+12*(cos(rib_r_1_2.rx)*sin(rib_r_1_2.ry)*sin(rib_r_1_2.rz)-sin(rib_r_1_2.rx)*cos(rib_r_1_2.rz))", 
+					"rib_r_1_2.tz": "-12+24*sin(rib_r_1_2.rx)*cos(rib_r_1_2.ry)+12*cos(rib_r_1_2.rx)*cos(rib_r_1_2.ry)",
+					"rib_r_1_3.rx": "torad(30+10*sin(age/4.5))",
+					"rib_r_1_3.ry": "torad(15)",
+					"rib_r_1_3.rz": "torad(-23)",
+					"rib_r_1_3.tx": "24*(sin(rib_r_1_3.rx)*sin(rib_r_1_3.ry)*cos(rib_r_1_3.rz)-cos(rib_r_1_3.rx)*sin(rib_r_1_3.rz))+26*(cos(rib_r_1_3.rx)*sin(rib_r_1_3.ry)*cos(rib_r_1_3.rz)+sin(rib_r_1_3.rx)*sin(rib_r_1_3.rz))", 
+					"rib_r_1_3.ty": "-24+24*(sin(rib_r_1_3.rx)*sin(rib_r_1_3.ry)*sin(rib_r_1_3.rz)+cos(rib_r_1_3.rx)*cos(rib_r_1_3.rz))+26*(cos(rib_r_1_3.rx)*sin(rib_r_1_3.ry)*sin(rib_r_1_3.rz)-sin(rib_r_1_3.rx)*cos(rib_r_1_3.rz))", 
+					"rib_r_1_3.tz": "-26+24*sin(rib_r_1_3.rx)*cos(rib_r_1_3.ry)+26*cos(rib_r_1_3.rx)*cos(rib_r_1_3.ry)",
+					"rib_r_1_1.sx": "clamp(age,0,50)/50",
+					"rib_r_1_1.sy": "clamp(age,0,50)/50",
+					"rib_r_1_1.sz": "clamp(age,0,50)/50",
+					"death_reverse_rib_r_1.rz": "if(health <= 0, -torad((10-hurt_time*hurt_time/10)*9), 0)",
+
+					"rib_l_2_1.rx": "-torad(111+8*sin(age/9) - hurt_time*8 + 150-3*clamp(age,0,50))",
+					"rib_l_2_1.ry": "-torad(35 - 10 * 1.5)",
+					"rib_l_2_1.rz": "torad(103 - 10)",
+					"rib_l_2_1.tx": "1-1*cos(rib_l_2_1.ry)*cos(rib_l_2_1.rz)+24*(sin(rib_l_2_1.rx)*sin(rib_l_2_1.ry)*cos(rib_l_2_1.rz)-cos(rib_l_2_1.rx)*sin(rib_l_2_1.rz))-4*(cos(rib_l_2_1.rx)*sin(rib_l_2_1.ry)*cos(rib_l_2_1.rz)+sin(rib_l_2_1.rx)*sin(rib_l_2_1.rz))", 
+					"rib_l_2_1.ty": "-24-1*cos(rib_l_2_1.ry)*sin(rib_l_2_1.rz)+24*(sin(rib_l_2_1.rx)*sin(rib_l_2_1.ry)*sin(rib_l_2_1.rz)+cos(rib_l_2_1.rx)*cos(rib_l_2_1.rz))-4*(cos(rib_l_2_1.rx)*sin(rib_l_2_1.ry)*sin(rib_l_2_1.rz)-sin(rib_l_2_1.rx)*cos(rib_l_2_1.rz))", 
+					"rib_l_2_1.tz": "4+1*sin(rib_l_2_1.ry)+24*sin(rib_l_2_1.rx)*cos(rib_l_2_1.ry)-4*cos(rib_l_2_1.rx)*cos(rib_l_2_1.ry)",
+					"rib_l_2_2.rx": "-torad(100+8*sin(age/(7)))",
+					"rib_l_2_2.ry": "-torad(8)",
+					"rib_l_2_2.rz": "torad(8)",
+					"rib_l_2_2.tx": "2-2*cos(rib_l_2_2.ry)*cos(rib_l_2_2.rz)+25*(sin(rib_l_2_2.rx)*sin(rib_l_2_2.ry)*cos(rib_l_2_2.rz)-cos(rib_l_2_2.rx)*sin(rib_l_2_2.rz))+8*(cos(rib_l_2_2.rx)*sin(rib_l_2_2.ry)*cos(rib_l_2_2.rz)+sin(rib_l_2_2.rx)*sin(rib_l_2_2.rz))", 
+					"rib_l_2_2.ty": "-25-2*cos(rib_l_2_2.ry)*sin(rib_l_2_2.rz)+25*(sin(rib_l_2_2.rx)*sin(rib_l_2_2.ry)*sin(rib_l_2_2.rz)+cos(rib_l_2_2.rx)*cos(rib_l_2_2.rz))+8*(cos(rib_l_2_2.rx)*sin(rib_l_2_2.ry)*sin(rib_l_2_2.rz)-sin(rib_l_2_2.rx)*cos(rib_l_2_2.rz))", 
+					"rib_l_2_2.tz": "-8+2*sin(rib_l_2_2.ry)+25*sin(rib_l_2_2.rx)*cos(rib_l_2_2.ry)+8*cos(rib_l_2_2.rx)*cos(rib_l_2_2.ry)",
+					"rib_l_2_1.sx": "clamp(age,0,50)/50",
+					"rib_l_2_1.sy": "clamp(age,0,50)/50",
+					"rib_l_2_1.sz": "clamp(age,0,50)/50",
+
+					"rib_r_2_1.rx": "if(health <= 0, if(hurt_time <= 0, sin(age/4), 0), -torad(111+8*sin(age/(3*pi))-hurt_time*8))",
+					"rib_r_2_1.ry": "if(health <= 0, if(hurt_time <= 0, sin(age/5), 0), torad(35 - hurt_time * 1.5))",
+					"rib_r_2_1.rz": "if(health <= 0, if(hurt_time <= 0, sin(age/3), -pi/2), -torad(103 - hurt_time + 150-3*clamp(age,0,50)))",
+					"rib_r_2_1.tx": "if(health <= 0, 18*(sin(rib_l_1_1.rx)*sin(rib_l_1_1.ry)*cos(rib_l_1_1.rz)-cos(rib_l_1_1.rx)*sin(rib_l_1_1.rz)), -1+1*cos(rib_r_2_1.ry)*cos(rib_r_2_1.rz)+24*(sin(rib_r_2_1.rx)*sin(rib_r_2_1.ry)*cos(rib_r_2_1.rz)-cos(rib_r_2_1.rx)*sin(rib_r_2_1.rz))-4*(cos(rib_r_2_1.rx)*sin(rib_r_2_1.ry)*cos(rib_r_2_1.rz)+sin(rib_r_2_1.rx)*sin(rib_r_2_1.rz)))", 
+					"rib_r_2_1.ty": "if(health <= 0, -18+18*(sin(rib_l_1_1.rx)*sin(rib_l_1_1.ry)*sin(rib_l_1_1.rz)+cos(rib_l_1_1.rx)*cos(rib_l_1_1.rz)) + 26*(hurt_time*hurt_time-12*hurt_time+20)/20, -24+1*cos(rib_r_2_1.ry)*sin(rib_r_2_1.rz)+24*(sin(rib_r_2_1.rx)*sin(rib_r_2_1.ry)*sin(rib_r_2_1.rz)+cos(rib_r_2_1.rx)*cos(rib_r_2_1.rz))-4*(cos(rib_r_2_1.rx)*sin(rib_r_2_1.ry)*sin(rib_r_2_1.rz)-sin(rib_r_2_1.rx)*cos(rib_r_2_1.rz)))", 
+					"rib_r_2_1.tz": "if(health <= 0, 18*sin(rib_l_1_1.rx)*cos(rib_l_1_1.ry) + 2*(10-hurt_time), 4-1*sin(rib_r_2_1.ry)+24*sin(rib_r_2_1.rx)*cos(rib_r_2_1.ry)-4*cos(rib_r_2_1.rx)*cos(rib_r_2_1.ry))",
+					"rib_r_2_2.rx": "-torad(100+8*sin(age/(7.5)))",
+					"rib_r_2_2.ry": "torad(8)",
+					"rib_r_2_2.rz": "-torad(8)",
+					"rib_r_2_2.tx": "-1+1*cos(rib_r_2_2.ry)*cos(rib_r_2_2.rz)+25*(sin(rib_r_2_2.rx)*sin(rib_r_2_2.ry)*cos(rib_r_2_2.rz)-cos(rib_r_2_2.rx)*sin(rib_r_2_2.rz))+8*(cos(rib_r_2_2.rx)*sin(rib_r_2_2.ry)*cos(rib_r_2_2.rz)+sin(rib_r_2_2.rx)*sin(rib_r_2_2.rz))", 
+					"rib_r_2_2.ty": "-25+1*cos(rib_r_2_2.ry)*sin(rib_r_2_2.rz)+25*(sin(rib_r_2_2.rx)*sin(rib_r_2_2.ry)*sin(rib_r_2_2.rz)+cos(rib_r_2_2.rx)*cos(rib_r_2_2.rz))+8*(cos(rib_r_2_2.rx)*sin(rib_r_2_2.ry)*sin(rib_r_2_2.rz)-sin(rib_r_2_2.rx)*cos(rib_r_2_2.rz))", 
+					"rib_r_2_2.tz": "-8-1*sin(rib_r_2_2.ry)+25*sin(rib_r_2_2.rx)*cos(rib_r_2_2.ry)+8*cos(rib_r_2_2.rx)*cos(rib_r_2_2.ry)",
+					"rib_r_2_1.sx": "clamp(age,0,50)/50",
+					"rib_r_2_1.sy": "clamp(age,0,50)/50",
+					"rib_r_2_1.sz": "clamp(age,0,50)/50",
+					"death_reverse_rib_r_2.rz": "if(health <= 0, -torad((10-hurt_time*hurt_time/10)*9), 0)",
+
+					"rib_l_3_1.rx": "torad(103+6*sin(age/9)-hurt_time*8)",
+					"rib_l_3_1.ry": "torad(15)",
+					"rib_l_3_1.rz": "-torad(70)",
+					"rib_l_3_1.tx": "1-1*cos(rib_l_3_1.ry)*cos(rib_l_3_1.rz)+21*(sin(rib_l_3_1.rx)*sin(rib_l_3_1.ry)*cos(rib_l_3_1.rz)-cos(rib_l_3_1.rx)*sin(rib_l_3_1.rz))-6*(cos(rib_l_3_1.rx)*sin(rib_l_3_1.ry)*cos(rib_l_3_1.rz)+sin(rib_l_3_1.rx)*sin(rib_l_3_1.rz))", 
+					"rib_l_3_1.ty": "-21-1*cos(rib_l_3_1.ry)*sin(rib_l_3_1.rz)+21*(sin(rib_l_3_1.rx)*sin(rib_l_3_1.ry)*sin(rib_l_3_1.rz)+cos(rib_l_3_1.rx)*cos(rib_l_3_1.rz))-6*(cos(rib_l_3_1.rx)*sin(rib_l_3_1.ry)*sin(rib_l_3_1.rz)-sin(rib_l_3_1.rx)*cos(rib_l_3_1.rz))", 
+					"rib_l_3_1.tz": "6+1*sin(rib_l_3_1.ry)+21*sin(rib_l_3_1.rx)*cos(rib_l_3_1.ry)-6*cos(rib_l_3_1.rx)*cos(rib_l_3_1.ry)",
+					"rib_l_3_2.rx": "-torad(105+6*sin(age/7))",
+					"rib_l_3_2.ry": "torad(10)",
+					"rib_l_3_2.rz": "torad(10)",
+					"rib_l_3_2.tx": "1-1*cos(rib_l_3_2.ry)*cos(rib_l_3_2.rz)+21*(sin(rib_l_3_2.rx)*sin(rib_l_3_2.ry)*cos(rib_l_3_2.rz)-cos(rib_l_3_2.rx)*sin(rib_l_3_2.rz))+5*(cos(rib_l_3_2.rx)*sin(rib_l_3_2.ry)*cos(rib_l_3_2.rz)+sin(rib_l_3_2.rx)*sin(rib_l_3_2.rz))", 
+					"rib_l_3_2.ty": "-21-1*cos(rib_l_3_2.ry)*sin(rib_l_3_2.rz)+21*(sin(rib_l_3_2.rx)*sin(rib_l_3_2.ry)*sin(rib_l_3_2.rz)+cos(rib_l_3_2.rx)*cos(rib_l_3_2.rz))+5*(cos(rib_l_3_2.rx)*sin(rib_l_3_2.ry)*sin(rib_l_3_2.rz)-sin(rib_l_3_2.rx)*cos(rib_l_3_2.rz))", 
+					"rib_l_3_2.tz": "-5+1*sin(rib_l_3_2.ry)+21*sin(rib_l_3_2.rx)*cos(rib_l_3_2.ry)+5*cos(rib_l_3_2.rx)*cos(rib_l_3_2.ry)",
+					"rib_l_3_1.sx": "clamp(age,0,50)/50",
+					"rib_l_3_1.sy": "clamp(age,0,50)/50",
+					"rib_l_3_1.sz": "clamp(age,0,50)/50",
+
+					"rib_r_3_1.rx": "torad(103+6*sin(age/(3*pi))-hurt_time*8)",
+					"rib_r_3_1.ry": "-torad(15)",
+					"rib_r_3_1.rz": "torad(70)",
+					"rib_r_3_1.tx": "-1+1*cos(rib_r_3_1.ry)*cos(rib_r_3_1.rz)+21*(sin(rib_r_3_1.rx)*sin(rib_r_3_1.ry)*cos(rib_r_3_1.rz)-cos(rib_r_3_1.rx)*sin(rib_r_3_1.rz))-6*(cos(rib_r_3_1.rx)*sin(rib_r_3_1.ry)*cos(rib_r_3_1.rz)+sin(rib_r_3_1.rx)*sin(rib_r_3_1.rz))", 
+					"rib_r_3_1.ty": "-21+1*cos(rib_r_3_1.ry)*sin(rib_r_3_1.rz)+21*(sin(rib_r_3_1.rx)*sin(rib_r_3_1.ry)*sin(rib_r_3_1.rz)+cos(rib_r_3_1.rx)*cos(rib_r_3_1.rz))-6*(cos(rib_r_3_1.rx)*sin(rib_r_3_1.ry)*sin(rib_r_3_1.rz)-sin(rib_r_3_1.rx)*cos(rib_r_3_1.rz))", 
+					"rib_r_3_1.tz": "6-1*sin(rib_r_3_1.ry)+21*sin(rib_r_3_1.rx)*cos(rib_r_3_1.ry)-6*cos(rib_r_3_1.rx)*cos(rib_r_3_1.ry)",
+					"rib_r_3_2.rx": "-torad(105+6*sin(age/7.5))",
+					"rib_r_3_2.ry": "-torad(10)",
+					"rib_r_3_2.rz": "-torad(10)",
+					"rib_r_3_2.tx": "-1+1*cos(rib_r_3_2.ry)*cos(rib_r_3_2.rz)+21*(sin(rib_r_3_2.rx)*sin(rib_r_3_2.ry)*cos(rib_r_3_2.rz)-cos(rib_r_3_2.rx)*sin(rib_r_3_2.rz))+5*(cos(rib_r_3_2.rx)*sin(rib_r_3_2.ry)*cos(rib_r_3_2.rz)+sin(rib_r_3_2.rx)*sin(rib_r_3_2.rz))", 
+					"rib_r_3_2.ty": "-21+1*cos(rib_r_3_2.ry)*sin(rib_r_3_2.rz)+21*(sin(rib_r_3_2.rx)*sin(rib_r_3_2.ry)*sin(rib_r_3_2.rz)+cos(rib_r_3_2.rx)*cos(rib_r_3_2.rz))+5*(cos(rib_r_3_2.rx)*sin(rib_r_3_2.ry)*sin(rib_r_3_2.rz)-sin(rib_r_3_2.rx)*cos(rib_r_3_2.rz))", 
+					"rib_r_3_2.tz": "-5-1*sin(rib_r_3_2.ry)+21*sin(rib_r_3_2.rx)*cos(rib_r_3_2.ry)+5*cos(rib_r_3_2.rx)*cos(rib_r_3_2.ry)",
+					"rib_r_3_1.sx": "clamp(age,0,50)/50",
+					"rib_r_3_1.sy": "clamp(age,0,50)/50",
+					"rib_r_3_1.sz": "clamp(age,0,50)/50",
+
+					"rib_l_4.ry": "torad(58+3*sin(age/10)+hurt_time*4)",
+					"rib_l_4.rz": "torad(35)",
+					"rib_l_4.tx": "4-4*cos(rib_l_4.ry)*cos(rib_l_4.rz)+16*(sin(rib_l_4.rx)*sin(rib_l_4.ry)*cos(rib_l_4.rz)-cos(rib_l_4.rx)*sin(rib_l_4.rz))-5*(cos(rib_l_4.rx)*sin(rib_l_4.ry)*cos(rib_l_4.rz)+sin(rib_l_4.rx)*sin(rib_l_4.rz))", 
+					"rib_l_4.ty": "-16-4*cos(rib_l_4.ry)*sin(rib_l_4.rz)+16*(sin(rib_l_4.rx)*sin(rib_l_4.ry)*sin(rib_l_4.rz)+cos(rib_l_4.rx)*cos(rib_l_4.rz))-5*(cos(rib_l_4.rx)*sin(rib_l_4.ry)*sin(rib_l_4.rz)-sin(rib_l_4.rx)*cos(rib_l_4.rz))", 
+					"rib_l_4.tz": "5+4*sin(rib_l_4.ry)+16*sin(rib_l_4.rx)*cos(rib_l_4.ry)-5*cos(rib_l_4.rx)*cos(rib_l_4.ry)",
+					"rib_l_4.sx": "clamp(age,0,50)/50",
+					"rib_l_4.sy": "clamp(age,0,50)/50",
+					"rib_l_4.sz": "clamp(age,0,50)/50",
+
+					"rib_r_4.ry": "-torad(58+3*sin(age/11)+hurt_time*4)",
+					"rib_r_4.rz": "-torad(35)",
+					"rib_r_4.tx": "-4+4*cos(rib_r_4.ry)*cos(rib_r_4.rz)+16*(sin(rib_r_4.rx)*sin(rib_r_4.ry)*cos(rib_r_4.rz)-cos(rib_r_4.rx)*sin(rib_r_4.rz))-5*(cos(rib_r_4.rx)*sin(rib_r_4.ry)*cos(rib_r_4.rz)+sin(rib_r_4.rx)*sin(rib_r_4.rz))", 
+					"rib_r_4.ty": "-16+4*cos(rib_r_4.ry)*sin(rib_r_4.rz)+16*(sin(rib_r_4.rx)*sin(rib_r_4.ry)*sin(rib_r_4.rz)+cos(rib_r_4.rx)*cos(rib_r_4.rz))-5*(cos(rib_r_4.rx)*sin(rib_r_4.ry)*sin(rib_r_4.rz)-sin(rib_r_4.rx)*cos(rib_r_4.rz))", 
+					"rib_r_4.tz": "5-4*sin(rib_r_4.ry)+16*sin(rib_r_4.rx)*cos(rib_r_4.ry)-5*cos(rib_r_4.rx)*cos(rib_r_4.ry)",
+					"rib_r_4.sx": "clamp(age,0,50)/50",
+					"rib_r_4.sy": "clamp(age,0,50)/50",
+					"rib_r_4.sz": "clamp(age,0,50)/50"
+				}
+			]
+		},
+		{
+			"part": "left_arm",
+			"id": "left_arm",
+			"invertAxis": "xy",
+			"mirrorTexture": "u",
+			"translate": [5, -22, 0],
+			"submodels": [
+				{
+					"id": "left_arm2",
+					"texture": "textures/entity/skeleton/skeleton.png",
+					"invertAxis": "xy",
+					"rotate": [-10, 10, -10],
+					"boxes": [
+						{"coordinates": [-9, 11, -3, 2, 12, 2], "textureOffset": [40, 16]}
+					]
+				}
+			]
+		},
+		{
+			"part": "right_arm",
+			"id": "right_arm",
+			"invertAxis": "xy",
+			"translate": [-5, -22, 0],
+			"submodels": [
+				{
+					"id": "death_reverse_arm",
+					"submodels": [
+						{
+							"id": "right_arm2",
+							"texture": "textures/entity/skeleton/skeleton.png",
+							"invertAxis": "xy",
+							"rotate": [-10, -10, 10],
+							"boxes": [
+								{"coordinates": [7, 11, -3, 2, 12, 2], "textureOffset": [40, 16]}
+							]
+						}
+					]
+				}
+			],
+			"animations": [
+				{
+					"death_reverse_arm.rz": "if(health <= 0, -torad((10-hurt_time*hurt_time/10)*9), 0)",
+					"right_arm2.rx": "if(health <= 0 && hurt_time > 0, sin(age/4), torad(10))",
+					"right_arm2.ry": "if(health <=0 && hurt_time > 0, sin(age/6), torad(10))",
+					"right_arm2.rz": "if(health <= 0, if(hurt_time > 0, sin(age/5), pi/2), torad(10))",
+					"right_arm2.tx": "if(health <= 0, -7+7*cos(right_arm2.ry)*cos(right_arm2.rz)+21*(sin(right_arm2.rx)*sin(right_arm2.ry)*cos(right_arm2.rz)-cos(right_arm2.rx)*sin(right_arm2.rz))+3*(cos(right_arm2.rx)*sin(right_arm2.ry)*cos(right_arm2.rz)+sin(right_arm2.rx)*sin(right_arm2.rz)), 0)", 
+					"right_arm2.ty": "if(health <= 0, -21+7*cos(right_arm2.ry)*sin(right_arm2.rz)+21*(sin(right_arm2.rx)*sin(right_arm2.ry)*sin(right_arm2.rz)+cos(right_arm2.rx)*cos(right_arm2.rz))+3*(cos(right_arm2.rx)*sin(right_arm2.ry)*sin(right_arm2.rz)-sin(right_arm2.rx)*cos(right_arm2.rz)) + 21*(hurt_time*hurt_time-20*hurt_time+100)/100, 0)", 
+					"right_arm2.tz": "if(health <= 0, -3-7*sin(right_arm2.ry)+21*sin(right_arm2.rx)*cos(right_arm2.ry)+3*cos(right_arm2.rx)*cos(right_arm2.ry) + (10 - hurt_time), 0)"
+				}
+			]
+		},
+		{
+			"part": "left_leg",
+			"id": "left_leg",
+			"invertAxis": "xy",
+			"mirrorTexture": "u",
+			"translate": [2, -12, -0.1],
+			"boxes": [
+				{"coordinates": [-3, 0, -1, 2, 12, 2], "textureOffset": [0, 16]}
+			]
+		},
+		{
+			"part": "right_leg",
+			"id": "right_leg",
+			"invertAxis": "xy",
+			"translate": [-2, -12, -0.1],
+			"boxes": [
+				{"coordinates": [1, 0, -1, 2, 12, 2], "textureOffset": [0, 16]}
+			]
+		}
+	]
+}

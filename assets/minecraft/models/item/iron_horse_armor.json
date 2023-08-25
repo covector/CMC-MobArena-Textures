@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/iron_horse_armor"
+  },
+
+  "overrides": [
+  {"predicate": {"custom_model_data":81}, "model": "item/custom/ADVENTURER1"},
+  {"predicate": {"custom_model_data":82}, "model": "item/custom/ADVENTURER2"},
+  {"predicate": {"custom_model_data":143}, "model": "item/custom/PIRATE3"}
+  
+  ]
+}

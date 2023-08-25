@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "minecraft:item/iron_sword"
+  },
+
+  "overrides": [
+  {"predicate": {"custom_model_data":71}, "model": "item/custom/ASSASSIN1"},
+  {"predicate": {"custom_model_data":91}, "model": "item/custom/SWORDMASTER1"},
+  {"predicate": {"custom_model_data":92}, "model": "item/custom/SWORDMASTER2"},
+  {"predicate": {"custom_model_data":121}, "model": "item/custom/PALADIN1"},
+  {"predicate": {"custom_model_data":141}, "model": "item/custom/PIRATE1"}
+  ]
+}

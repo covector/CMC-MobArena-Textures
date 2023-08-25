@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "minecraft:item/diamond_hoe"
+  },
+
+  "overrides": [
+  {"predicate": {"custom_model_data":52}, "model": "item/custom/ARCHMAGE2"},
+  {"predicate": {"custom_model_data":53}, "model": "item/custom/ARCHMAGE3"}
+  ]
+}

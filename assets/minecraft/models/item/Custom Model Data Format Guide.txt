@@ -1,0 +1,18 @@
+KNIGHT - 1
+TANK - 2
+RANGER - 3
+PRIEST - 4
+ARCHMAGE - 5
+SHADOWMAGE - 6
+ASSASSIN - 7
+ADVNETURER - 8
+SWORDMASTER - 9
+BARD - 10
+SPEARMASTER - 11
+PALADIN - 12
+
+Example:
+ARCHMAGE1 will have custom_model_data of 51
+KNIGHT2 will have custom_model_data of 12
+ASSASSIN1 will have custom_model_data of 71
+BARD2 will have custom_model_data of 102

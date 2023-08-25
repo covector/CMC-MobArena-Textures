@@ -1,0 +1,24 @@
+{
+  "parent": "builtin/entity",
+  "gui_light": "front",
+  "textures": {
+      "particle": "item/trident"
+  },
+  "display": {
+      "gui": {
+          "rotation": [ 0, 0, -40 ],
+          "translation": [ 10, 4, 0 ],
+          "scale": [ 0.65, 0.65, 0.65 ]
+      },
+      "fixed": {
+          "rotation": [ 0, 0, 40 ],
+          "translation": [ -2, 10, 5],
+          "scale":[ 0.6, 0.6, 0.6]
+      },
+      "ground": {
+          "rotation": [ 0, 0, -40 ],
+          "translation": [ 2, 10, 2],
+          "scale":[ 0.25, 0.25, 0.25]
+      }
+  }
+}
