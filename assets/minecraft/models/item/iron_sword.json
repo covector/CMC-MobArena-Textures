@@ -10,8 +10,8 @@
   {"predicate": {"custom_model_data":92}, "model": "item/custom/SWORDMASTER2"},
   {"predicate": {"custom_model_data":121}, "model": "item/custom/PALADIN1"},
   {"predicate": {"custom_model_data":141}, "model": "item/custom/PIRATE1"},
-  {"predicate": {"custom_model_data":141}, "model": "item/custom/BLOODBORN1"},
-  {"predicate": {"custom_model_data":141}, "model": "item/custom/BLOODBORN2"},
-  {"predicate": {"custom_model_data":141}, "model": "item/custom/BLOODBORN3"}
+  {"predicate": {"custom_model_data":151}, "model": "item/custom/BLOODBORN1"},
+  {"predicate": {"custom_model_data":152}, "model": "item/custom/BLOODBORN2"},
+  {"predicate": {"custom_model_data":153}, "model": "item/custom/BLOODBORN3"}
   ]
 }
