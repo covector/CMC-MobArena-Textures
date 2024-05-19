@@ -1,3 +1,5 @@
+*.kra
+
 # test modelengine mobs
 assets/modelengine/models/illidan
 assets/modelengine/textures/entity/illidan*.png
