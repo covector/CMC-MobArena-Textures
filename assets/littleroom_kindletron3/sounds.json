@@ -1,0 +1,72 @@
+{
+   "littleroom.kindletron3.death":{
+		 "sounds": [
+			"littleroom/kindletron3/death"
+		 ]
+	},
+   "littleroom.kindletron3.glide":{
+		 "sounds": [
+			"littleroom/kindletron3/glide"
+		 ]
+	},
+   "littleroom.kindletron3.impact01":{
+		 "sounds": [
+			"littleroom/kindletron3/impact01"
+		 ]
+	},
+   "littleroom.kindletron3.impact02":{
+		 "sounds": [
+			"littleroom/kindletron3/impact02"
+		 ]
+	},
+   "littleroom.kindletron3.impact03":{
+		 "sounds": [
+			"littleroom/kindletron3/impact03"
+		 ]
+	},
+   "littleroom.kindletron3.impact04":{
+		 "sounds": [
+			"littleroom/kindletron3/impact04"
+		 ]
+	},
+   "littleroom.kindletron3.kindletron_idle_40ticks":{
+		 "sounds": [
+			"littleroom/kindletron3/kindletron_idle_40ticks"
+		 ]
+	},
+   "littleroom.kindletron3.saw":{
+		 "sounds": [
+			"littleroom/kindletron3/saw"
+		 ]
+	},
+   "littleroom.kindletron3.swing":{
+		 "sounds": [
+			"littleroom/kindletron3/swing"
+		 ]
+	},
+   "littleroom.kindletron3.sword_swing01":{
+		 "sounds": [
+			"littleroom/kindletron3/sword_swing01"
+		 ]
+	},
+   "littleroom.kindletron3.sword_swing02":{
+		 "sounds": [
+			"littleroom/kindletron3/sword_swing02"
+		 ]
+	},
+   "littleroom.kindletron3.sword_swing03":{
+		 "sounds": [
+			"littleroom/kindletron3/sword_swing03"
+		 ]
+	},
+   "littleroom.kindletron3.sword_swing04":{
+		 "sounds": [
+			"littleroom/kindletron3/sword_swing04"
+		 ]
+	},
+   "littleroom.kindletron3.land":{
+		 "sounds": [
+			"littleroom/kindletron3/land"
+		 ]
+	}
+}
