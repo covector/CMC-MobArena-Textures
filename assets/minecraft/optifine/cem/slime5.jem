@@ -1,0 +1,92 @@
+{
+	"credit": "Made with Blockbench",
+	"texture": "textures/entity/slime/yor.png",
+	"textureSize": [48, 48],
+	"models": [
+		{
+			"part": "body",
+			"id": "body",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0],
+			"boxes": [
+				{"coordinates": [-4, 0, -4, 8, 10, 8], "textureOffset": [0, 0]},
+				{"coordinates": [-4, 2, -4, 8, 8, 8], "textureOffset": [0, 18], "sizeAdd": 0.5},
+				{"coordinates": [-5, 1, -2, 10, 7, 5], "textureOffset": [0, 34]}
+			],
+			"submodels": [
+				{
+					"id": "bang_quarter_r_1",
+					"invertAxis": "xy",
+					"translate": [4, 5, -2],
+					"rotate": [2.5, 22.5, 10],
+					"boxes": [
+						{"coordinates": [-0.61732, -3.0403, -1.923, 2, 4, 2], "textureOffset": [32, 0]}
+					]
+				},
+				{
+					"id": "bang_quarter_r_2",
+					"invertAxis": "xy",
+					"translate": [5, 5, -1],
+					"rotate": [5, 22.5, -5],
+					"boxes": [
+						{"coordinates": [-0.61732, -6.08052, -3.92036, 2, 4, 3], "textureOffset": [32, 6]}
+					]
+				},
+				{
+					"id": "bang_quarter_l_1",
+					"invertAxis": "xy",
+					"translate": [-4, 5, -2],
+					"rotate": [2.5, -22.5, -10],
+					"boxes": [
+						{"coordinates": [-1.38268, -3.0403, -1.923, 2, 4, 2], "textureOffset": [32, 13]}
+					]
+				},
+				{
+					"id": "bang_quarter_l_2",
+					"invertAxis": "xy",
+					"translate": [-5, 5, -1],
+					"rotate": [5, -22.5, 5],
+					"boxes": [
+						{"coordinates": [-1.38268, -6.08052, -3.92036, 2, 4, 3], "textureOffset": [32, 19]}
+					]
+				},
+				{
+					"id": "horn_r",
+					"invertAxis": "xy",
+					"translate": [4, 7, 1],
+					"rotate": [0, -42.5, 10],
+					"boxes": [
+						{"coordinates": [-2.67559, 0, -1.73728, 3, 3, 3], "textureOffset": [32, 27]}
+					]
+				},
+				{
+					"id": "horn_l",
+					"invertAxis": "xy",
+					"translate": [-4, 8, 1],
+					"rotate": [0, 42.5, -10],
+					"boxes": [
+						{"coordinates": [-0.32441, -1, -1.73728, 3, 3, 3], "textureOffset": [32, 33]}
+					]
+				}
+			]
+		},
+		{
+			"part": "right_eye",
+			"id": "right_eye",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0]
+		},
+		{
+			"part": "left_eye",
+			"id": "left_eye",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0]
+		},
+		{
+			"part": "mouth",
+			"id": "mouth",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0]
+		}
+	]
+}
