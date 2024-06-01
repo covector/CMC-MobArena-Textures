@@ -1,0 +1,1 @@
+{"textures":{"1":"modelengine:entity/mh_btwo_texture"},"elements":[{"from":[-9.5,8.0,-9.5],"to":[25.5,8.0,25.5],"faces":{"up":{"uv":[4.375,4.375,0.0,0.0],"tintindex":0,"rotation":0,"texture":"#1"},"down":{"uv":[4.375,4.375,0.0,8.75],"tintindex":0,"rotation":0,"texture":"#1"}}}],"display":{"gui":{"rotation":[30,225,0]}}}
