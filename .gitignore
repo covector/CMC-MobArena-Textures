@@ -15,3 +15,7 @@ assets/modelengine/textures/entity/pitlord*.png
 
 assets/modelengine/models/scarecrow
 assets/modelengine/textures/entity/scarecrow*.png
+
+# bro why you add it back
+assets/minecraft/optifine/cem/creeper.jem
+assets/minecraft/optifine/cem/skeleton.jem
